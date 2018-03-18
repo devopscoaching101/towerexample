@@ -1,0 +1,11 @@
+---
+  - name: ensure postgresql is at the latest version
+    apt: name=postgresql state=latest
+    tags: install
+  - name: ensure that postgresql is started
+    service: name=postgresql state=started
+    tags : install
+
+  - name: uninstall postgres
+    apt: name=postgresql state=absent
+    tags: uninstall

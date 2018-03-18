@@ -1,0 +1,12 @@
+---
+- hosts: webserver
+  gather_facts: no
+  become: true
+  roles:
+    - webserverrole
+
+- hosts: database
+  become: true
+  roles: 
+    - dbrole
+

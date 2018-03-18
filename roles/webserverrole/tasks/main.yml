@@ -1,0 +1,9 @@
+---
+  - name: ensure apache is at the latest version
+    apt: name=apache2 state=latest
+    tags: install
+
+  - name: uninstall apache
+    apt: name=apache2 state=absent
+    tags: uninstall
+
